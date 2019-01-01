@@ -1,0 +1,2 @@
+# rand
+Generate random values.
