@@ -37,7 +37,7 @@ class Rand implements RandInterface
      *
      * @return bool Returns true if the hash needs a rehash and false if not.
      */
-    public function getString(int $length = 16, string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): bool
+    public function getString(int $length = 16, string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string
     {
         $pieces = [];
         $max = mb_strlen($keyspace, '8bit') - 1;
