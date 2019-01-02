@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * Crystal Chess - Generate random values.
@@ -7,10 +8,8 @@ declare(strict_types=1);
  *
  * @link <https://github.com/crystal-chess/hasher> Crystal Hasher.
  */
+
 namespace CrystalChess;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use function random_int;
-use function mb_strlen;
 
 /**
  * The rand interface.
