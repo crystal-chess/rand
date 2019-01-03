@@ -6,7 +6,7 @@ declare(strict_types=1);
  *
  * @author Crystal Chess Contributors <https://github.com/orgs/crystal-chess/people>
  *
- * @link <https://github.com/crystal-chess/hasher> Crystal Hasher.
+ * @link <https://github.com/crystal-chess/rand> Crystal Rand.
  */
 
 namespace CrystalChess;
