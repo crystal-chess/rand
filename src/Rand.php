@@ -13,6 +13,7 @@ namespace CrystalChess;
 
 use function mb_strlen;
 use function random_int;
+use function implode;
 
 /**
  * The rand class.
