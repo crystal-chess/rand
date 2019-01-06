@@ -11,9 +11,9 @@ declare(strict_types=1);
 
 namespace CrystalChess;
 
+use function implode;
 use function mb_strlen;
 use function random_int;
-use function implode;
 
 /**
  * The rand class.
