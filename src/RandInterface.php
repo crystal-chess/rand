@@ -12,14 +12,14 @@ declare(strict_types=1);
 namespace CrystalChess;
 
 use function implode;
+use function intval;
 use function mb_strlen;
 use function random_int;
-use function intval;
 
 /**
  * The rand class.
  */
-class Rand implements RandInterface
+class RandInterface implements RandInterface
 {
     /**
      * Generate a random bool value.
