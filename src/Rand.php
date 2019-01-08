@@ -36,7 +36,7 @@ class Rand implements RandInterface
      * @param int    $length   The string length.
      * @param string $keyspace The list of characters allowed to use.
      *
-     * @return bool Returns true if the hash needs a rehash and false if not.
+     * @return string Returns the generated string.
      */
     public function getString(int $length = 16, string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string
     {
@@ -47,5 +47,17 @@ class Rand implements RandInterface
         }
 
         return implode('', $pieces);
+    }
+
+    /**
+     * Generate a random two factor code.
+     *
+     * @param int $length The code length.
+     *
+     * @return int Returns the two factor code.
+     */
+    public function getTwoFactorCode(int $length = 6): int
+    {
+        return intval($this->getString('0123456789'));
     }
 }
