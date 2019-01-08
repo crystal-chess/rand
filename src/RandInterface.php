@@ -17,19 +17,16 @@ use function mb_strlen;
 use function random_int;
 
 /**
- * The rand class.
+ * The rand interface.
  */
-class RandInterface implements RandInterface
+interface RandInterface
 {
     /**
      * Generate a random bool value.
      *
      * @return bool Returns a random bool value.
      */
-    public function getBool(): bool
-    {
-        return (bool) random_int(0, 1);
-    }
+    public function getBool(): bool;
 
     /**
      * Generate a random string value.
@@ -39,16 +36,7 @@ class RandInterface implements RandInterface
      *
      * @return string Returns the generated string.
      */
-    public function getString(int $length = 16, string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string
-    {
-        $pieces = [];
-        $max = mb_strlen($keyspace, '8bit') - 1;
-        for ($i = 0; $i < $length; $i++) {
-            $pieces[] = $keyspace[random_int(0, $max)];
-        }
-
-        return implode('', $pieces);
-    }
+    public function getString(int $length = 16, string $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'): string;
 
     /**
      * Generate a random two factor code.
@@ -57,8 +45,5 @@ class RandInterface implements RandInterface
      *
      * @return int Returns the two factor code.
      */
-    public function getTwoFactorCode(int $length = 6): int
-    {
-        return intval($this->getString('0123456789'));
-    }
+    public function getTwoFactorCode(int $length = 6): int;
 }
