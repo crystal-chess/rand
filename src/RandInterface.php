@@ -11,11 +11,6 @@ declare(strict_types=1);
 
 namespace CrystalChess;
 
-use function implode;
-use function intval;
-use function mb_strlen;
-use function random_int;
-
 /**
  * The rand interface.
  */
