@@ -55,9 +55,11 @@ class Rand implements RandInterface
      * @param int $length The code length.
      *
      * @return int Returns the two factor code.
+     *
+     * @codeCoverageIgnore
      */
     public function getTwoFactorCode(int $length = 6): int
     {
-        return intval($this->getString('0123456789'));
+        return intval($this->getString($length, '0123456789'));
     }
 }
